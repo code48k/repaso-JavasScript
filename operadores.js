@@ -1,0 +1,468 @@
+// CONOCEMOS VARIOS OPERADORES MATEMÁTICOS PORQUE NO LOS ENSEÑARON EN LA ESCUELA. SON COSAS COMO LA SUMA +, MULTIPLICACIÓN *, RESTA -, DIVISIÓN, ETC...
+
+// NOS VAMOS A CONCENTRAR EN LOS ASPECTOS DE LOS OPERADORES QUE NO ESTÁN CUBIERTOS EN LA ARITMÉTICA ESCOLAR.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// TERMINOS UNARIO, BINARIO, OPERANDO
+
+// ANTES DE CONTINUAR, COMPRENDAMOS LA TERMINOLOGÍA COMÚN.
+
+// UN OPERANDO - ES A LO QUE SE APLICAN LOS OPERADORES. POR EJEMPLO, EN LA MULTIPLICACIÓN DE '5 * 2' HAY DOS OPERANDOS: EL OPERANDO IZQUIERDO ES 5 Y EL OPERANDO DERECHO ES 2. A VECES, LA GENTE LOS LLAMA ARGUMENTOS EN LUGAR DE OPERANDOS.
+
+// UN OPERADOR ES UNARIO SI TIENE UN SOLO OPERANDO. POR EJEMPLO, LA NEGACIÓN UNARIA -  INVIERTE EL SIGNO DE UN NÚMERO.
+
+let x1 = 1;
+x1 = -x1;
+console.log(x1); // -1, se aplicó negación unaria
+console.log(``);
+
+// UN OPERADOR ES BINARIO SI TIENES DOS OPERANDOS. EL MISMO NEGATIVO TAMBIÉN EXISTE EN FORMA BINARIA.
+
+let x2 = 1, y2 = 3;
+console.log( y2 - x2 ); // 2, binario negativo resta valores
+console.log(``);
+
+// FORMALMENTE, ESTAMOS HABLANDO DE DOS OPERADORES DISTINTOS: LA NEGACIÓN UNARIA (UN OPERANDO: REVIERTE EL SÍMBOLO) Y LA RESTA BINARIA (DOS OPERANDOS: RESTA).
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// MATEMATICAS
+
+// ESTÁN SOPORTADAS LAS SIGUIENTES OPERACIONES:
+
+// SUMA (+)
+
+// RESTA (-)
+
+// MULTIPLICACIÓN (*)
+
+// DIVISIÓN (/)
+
+// RESTO (%)
+
+// EXPONENCIACIÓN
+
+// LOS PRIMEROS CUATRO SON CONOCIDOS MIENTRAS QUE % Y ** DEBEN SER EXPLICADOS MÁS AMPLIAMENTE.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// RESTO %
+
+// EL OPERADOR RESTO %, A PESAR DE SU APARIENCIA, NO ESTÁ RELACIONADO CON PORCENTAJES.
+
+// EL RESULTADO DE 'a % b' ES EL RESTO DE LA DIVISIÓN ENTERA DE 'a' POR 'b'.
+
+// POR EJEMPLO:
+
+console.log(5 % 2); // 1, es el resto de 5 dividido por 2
+console.log(8 % 3); // 2, es el resto de 8 dividido por 3
+console.log(8 % 4); // 0, es el resto de 8 dividido por 4
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// EXPONENCIACIÓN **
+
+// EL OPERADOR EXPONENCIACIÓN 'a ** b' ELEVA A LA POTENCIA DE B.
+
+// POR EJEMPLO:
+
+console.log(2 ** 2); // 2² = 4
+console.log(2 ** 3); // 2³ = 8
+console.log(2 ** 4); // 2⁴ = 16
+console.log(``);
+
+// MATEMÁTICAMENTE, LA EXPONENCIACIÓN ESTÁ DEFINIDA PARA OPERADORES NO ENTEROS TAMBIÉN.
+
+// POR EJEMPLO, LA RAÍZ CUADRADA ES EL EXPONENTE ½.
+
+console.log(4 ** (1/2)); // 2 (potencia de 1/2 es lo mismo que raíz cuadrada)
+console.log(8 ** (1/3)); // 2 (potencia de 1/3 es lo mismo que raíz cúbica)
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// CONCATENACIÓN DE CADENAS CON EL BINARIO +
+
+// AHORA VEAMOS LAS CARACTERÍSTICAS DE LOS OPERADORES DE JAVASCRIPT QUE VAN MÁS ALLA DE LA ARITMÉTICA ESCOLAR.
+
+// NORMALMENTE EL OPERADOR + SUMA NÚMEROS.
+
+// PERO SI SE APLICA EL + BINARIO A UNA CADENA, LOS UNE (CONCATENA).
+
+let s = "my" + "string";
+console.log(s); // 'mystring'
+console.log(``);
+
+// TENGA PRESENTE QUE SI UNO DE LOS OPERANDOS ES UNA CADENA, EL OTRO ES CONVERTIDO A UNA CADENA TAMBIÉN.
+
+// POR EJEMPLO:
+
+console.log('1' + 2); // "12"
+console.log(2 + '1'); // "21"
+console.log(``);
+
+// VIERON, NO IMPORTA SI EL PRIMER OPERANDO ES UNA CADENA O EL SEGUNDO.
+
+// AQUÍ HAY UN EJEMPLO ALGO MÁS COMPLEJO.
+
+console.log(2 + 2 + '1'); // "41" y no "221"
+console.log(``);
+
+// AQUÍ, LOS OPERADORES TRABAJAN UNO DESPUÉS DE OTRO. EL PRIMER + SUMA DOS NÚMEROS ENTONCES DEVUELVE 4, LUEGO EL SIGUIENTE + LE AGREGA A LA CADENA 1, ASÍ QUE SE EVALUA COMO '4 + 1 = 41'.
+
+console.log('1' + 2 + 2); // "122", no es "14"
+console.log(``);
+
+// AQUÍ EL PRIMER OPERANDO ES UNA CADENA, EL COMPILADOR TRATA LOS OTROS DOS OPERANDOS COMO CADENAS TAMBIÉN. EL 2 ES CONCATENADO A '1', ENTONCES ES COMO '1 + 2' = '12' Y '12 + 2' = '122'.
+
+// EL BINARIO + ES EL ÚNICO OPERADOR QUE SOPORTA CADENAS EN ESA FORMA. OTROS OPERADORES MATEMÁTICOS TRABAJAN SOLAMENTE CON NÚMEROS Y SIEMPRE CONVIERTEN SUS OPERANDOS A NÚMEROS.
+
+// POR EJEMPLO, RESTA Y DIVISIÓN.
+
+console.log(2 - '1'); // 1
+console.log('6' / '2'); // 3
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// CONVERSIÓN NUMÉRICA, UNARIO +
+
+// LA SUMA + EXISTE EN DOS FORMAS: LA FORMA BINARIA QUE UTILIZAMOS ARRIBA Y LA FORMA UNARIA.
+
+// EL UNARIO SUMA O, EN OTRAS PALABRAS, EL OPERADOR SUMA + APLICADO A UN SOLO VALOR, NO HACE NADA A LOS NÚMEROS. PERO SI EL OPERANDO NO ES UN NÚMERO, EL UNARIO SUMA LO CONVIERTE EN UN NÚMERO.
+
+// POR EJEMPLO:
+
+let x = 1;
+console.log(+x); // Sin efecto en números, 1
+console.log(``);
+
+let y = -2;
+console.log(+y); // -2
+console.log(``);
+
+
+console.log(+ true); // 1
+console.log(+ ""); //  0
+console.log(``);
+
+// REALMENTE HACE LO MISMO QUE NUMBER(...), PERO ES MÁS CORTO.
+
+// LA NECESIDAD DE CONVERTIR CADENAS EN NÚMEROS SURGE CON MUCHA FRECUENCIA. POR EJEMPLO, SI ESTAMOS OBTENIENDO VALORES DE CAMPOS DE FORMULARIO HTML, GENERALMENTE SON CADENAS.
+
+// EL OPERADOR BINARIO SUMA LOS AGREGARÍA COMO CADENAS.
+
+let apples1 = "2";
+let oranges1 = "3";
+
+console.log(apples1 + oranges1); // "23", el binario suma concatena las cadenas
+console.log(``);
+
+// SI QUEREMOS TRATARLOS COMO NÚMEROS, NECESITAMOS CONVERTIRLOS Y LUEGO SUMARLOS.
+
+let apples2 = "2";
+let oranges2 = "3";
+
+// ambos valores convertidos a números antes del operador binario suma
+console.log(+ apples2 + + oranges2); // 5
+console.log(``);
+
+// la variante más larga
+console.log(Number(apples2) + Number(oranges2) ); // 5
+console.log(``);
+
+// DESDE EL PUNTO DE VISTA DE UN MATEMÁTICO, LA ABUNDANCIA DE SIGNOS MÁS PUEDE PARECER EXTRAÑA. PERO DESDE EL PUNTO DE VISTA DE UN PROGRAMADOR NO HAY NADA ESPECIAL: PRIMERO SE APLICAN LOS SIGNOS MÁS UNARIOS QUE CONVIERTEN LAS CADENAS EN NÚMEROS, Y LUEGO EL SIGNO MÁS BINARIO LOS SUMA.
+
+// ¿POR QUÉ SE APLICAN LOS SIGNOS MÁS UNARIOS A LOS VALORES ANTES QUE LOS BINARIOS? COMO VEREMOS, ESO SE DEBE A SU MAYOR PRECEDENCIA.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// PRECEDENCIA DEL OPERADOR
+
+// SI UNA EXPRESIÓN TIENE MÁS DE UN OPERADOR, EL ORDEN DE EJECUCIÓN SE DEFINE POR SU PRECEDENCIA O, EN OTRAS PALABRAS, EL ORDEN DE PRIORIDAD PREDETERMINADO DE LOS OPERADORES.
+
+// DESDE LA ESCUELA, TODOS SABEMOS QUE LA MULTIPLICACIÓN EN LA EXPRESIÓN '1 + 2 * 2' DEBE CALCULARSE ANTES DE LA SUMA. ESO ES EXACTAMENTE LA PRECEDENCIA. SE DICE QUE LA MULTIPLICACIÓN TIENE UNA MAYOR PRECEDENCIA QUE LA SUMA.
+
+// LOS PARÉNTESIS ANULAN CUALQUIER PRECEDENCIA, POR LO QUE SI NO ESTAMOS SATISFECHOS CON EL ORDEN PREDETERMINADO, PODEMOS USARLOS PARA CAMBIARLO. POR EJEMPLO, ESCRIBA '(1 + 2) * 2'.
+
+// HAY MUCHOS OPERADORES EN JAVASCRIPT. CADA OPERADOR TIENE UN NÚMERO DE PRECEDENCIA CORRESPODIENTE. EL QUE TIENE EL NÚMERO MÁS GRANDE SE EJECUTA PRIMERO. SI LA PRECEDENCIA ES LA MISMA, EL ORDEN DE EJECUCIÓN ES DE IZQUIERDA A DERECHA.
+
+// AQUÍ HAY UN EXTRACTO DE LA TABLA DE PRECEDENCIA (NO NECESITA RECORDAR ESTO, PERO TENGA EN CUENTA QUE LOS OPERADORES UNARIOS SON MÁS ALTOS QUE EL OPERADOR BINARIO CORRESPONDIENTE).
+
+// PRECEDENCIA	                  NOMBRE	                    SIGNO
+// …	…	…
+// 14	                          SUMA UNARIA	                +
+// 14	                          NEGACIÓN UNARIA	            -
+// 13	                          EXPONENCIACIÓN	            **
+// 12	                          MULTIPLICACIÓN	            *
+// 12	                          DIVISIÓN	                    /
+// 11	                          SUMA	                        +
+// 11	                          RESTA	                        -
+// …	                          …	                            …
+// 2	                          ASIGNACIÓN	                =
+// …	                          …	                            …
+
+// COMO PODEMOS VER, LA "SUMA UNARIA" TIENE UNA PRIORIDAD DE 14, QUE ES MAYOR QUE EL 11 DE "SUMA" (SUMA BINARIA). ES POR ESO QUE, EN LA EXPRESIÓN '++apples + +oranges', LAS SUMAS UNARIAS SE HACEN ANTES DE LA ADICIÓN.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// ASIGNACIÓN
+
+// TENGAMOS EN CUENTA QUE UNA ASIGNACIÓN = TAMBIÉN ES UN OPERADOR. ESTÁ LISTADO EN LA TABLA DE PRECEDENCIA CON LA PRIORIDAD MUY BAJA DE 2.
+
+// ES POR ESO QUE, CUANDO ASIGNAMOS UNA VARIABLE, COMO Y = 2 * 2 + 1, LOS CÁLCULOS SE REALIZAN PRIMERO Y LUEGO SE EVALÚA EL =, ALMACENANDO EL RESULTADO EN Y.
+
+let i = 2 * 2 + 1;
+console.log(i); // 5
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// ASIGNACIÓN = DEVUELVE UN VALOR
+
+// EL HECHO DE QUE = SEA UN OPERADOR, NO UNA CONSTRUCCIÓN "MÁGICA" DEL LENGUAJE, TIENE UN IMPLICACIÓN INTERESANTE.
+
+// TODOS LOS OPERADORES EN JAVASCRIPT DEVUELVEN UN VALOR. ESTO ES OBVIO PARA + Y -, PERO TAMBIÉN ES CIERTO PARA =.
+
+// LA LLAMADA 'y = value' ESCRIBE EL 'value' EN 'y' Y LUEGO LO DEVUELVE.
+
+// AQUÍ HAY UNA DEMOSTRACIÓN QUE USA UNA ASIGNACIÓN COMO PARTE DE UNA EXPRESIÓN MÁS COMPLEJA.
+
+let a = 1;
+let b = 2;
+
+let c = 3 - (a = b + 1);
+
+console.log(a); // 3
+console.log(c); // 0
+console.log(``);
+
+// EN EL EJEMPLO ANTERIOR, EL RESULTADO DE LA EXPRESIÓN '(a = b + 1)' ES EL VALOR ASIGNADO 'a' (ES DECIR, 3). LUEGO SE USA PARA EVALUACIONES ADICIONALES.
+
+// CÓDIGO GRACIOSO, ¿NO? DEBERÍAMOS ENTENDER CÓMO FUNCIONA, PORQUE A VECES LO VEMOS EN LAS BIBLIOTECAS DE JAVASCRIPT.
+
+// PERO NO DEBERÍAMOS ESCRIBIR ALGO ASÍ. TALES TRUCOS DEFINITIVAMENTE NO HACEN QUE EL CÓDIGO SEA MÁS CLARO O LEGIBLE.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// ASIGNACIONES ENCADENADAS
+
+// OTRA CARACTERÍSTICA INTERESANTE ES LA HABILIDAD PARA ENCADENAR ASIGNACIONES.
+
+let d, e, f;
+
+d = e = f = 2 + 2;
+
+console.log(d); // 4
+console.log(e); // 4
+console.log(f); // 4
+console.log(``);
+
+// LAS ASIGNACIONES ENCADENADAS EVALÚAN DE DERECHA A IZQUIERDA. PRIMERO, SE EVALÚA LA EXPRESIÓN MÁS A LA DERECHA '2 + 2' Y LUEGO SE ASIGNA A LAS VARIABLES DE LA IZQUIERDA: 'f', 'e' Y 'd'. AL FINAL, TODAS LAS VARIABLES COMPARTEN UN SOLO VALOR.
+
+// UNA VEZ MÁS, CON EL PROPÓSITO DE LA LEGIBILIDAD ES MEJOR SEPARA TAL CÓDIGO EN UNAS POCAS LÍNEAS.
+
+// Una vez más, con el propósito de la legibilidad es mejor separa tal código en unas pocas líneas
+
+f = 2 + 2;
+e = f;
+d = f;
+
+// ES MÁS FÁCIL DE LEER, ESPECIALMENTE CUANDO SE HACE DE UN VISTAZO.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// MODIFICAR EN EL LUGAR
+
+// A MENUDO NECESITAMOS APLICAR UN OPERADOR A UNA VARIABLE Y GUARDAR EL NUEVO RESULTADO EN ESA MISMA VARIABLE.
+
+// POR EJEMPLO:
+
+let n = 2;
+n = n + 5;
+n = n * 2;
+
+// ESTA NOTACIÓN PUEDE SER ACORTADA UTILIZANDO LOS OPERADORES '+=' Y '*='.
+
+n = 2;
+n += 5; // ahora n = 7  (es lo mismo que n = n + 5)
+n *= 2; // ahora n = 14 (es lo mismo que n = n * 2)
+
+console.log(n); // 14
+console.log(``);
+
+// LOS OPERADORES CORTOS "MODIFICA Y ASIGNA" EXISTEN PARA TODOS LOS OPERADORES ARITMÉTICOS Y DE NIVEL BIT: '/=', '-=', ETCÉTERA.
+
+// TALES OPERADORES TIENEN LA MISMA PRECEDENCIA QUE LA ASIGNACIÓN NORMAL, POR LO TANTO SE EJECUTAN DESPUÉS DE OTROS CÁLCULOS.
+
+n = 2;
+
+n *= 3 + 5; // el lado derecho es evaluado primero, es lo mismo que n *= 8
+
+console.log(n); // 16
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// INCREMENTO Y DECREMENTO
+
+// AUMENTAR O DISMINUIR UN NÚMERO EN UNO ES UNA DE LAS OPERACIONES NUMÉRICAS MÁS COMUNES.
+
+// ENTONCES, HAY OPERADORES ESPECIALES PARA ELLO.
+
+// INCREMENTO ++ INCREMENTA UNA VARIABLE POR 1.
+
+let counter1 = 2;
+counter1++; // funciona igual que counter = counter + 1, pero es más corto
+console.log(counter1); // 3
+console.log(``);
+
+// DECREMENTO -- DECREMENTA UNA VARIABLE POR 1.
+
+counter2 = 2;
+counter2--;      // funciona igual que counter = counter - 1, pero es más corto
+console.log(counter2); // 1
+console.log(``);
+
+// IMPORTANTE
+
+// INCREMENTO/DECREMENTO SÓLO PUEDE SER APLICADO A VARIABLES. INTENTAR UTILIZARLO EN UN VALOR COMO 5++ DARÁ UN ERROR.
+
+// LOS OPERADORES '++' Y '--' PUEDEN SER COLOCADOS ANTES O DESPUÉS DE UNA VARIABLE.
+
+// CUANDO EL OPERADOR VA DESPUÉS DE LA VARIABLE, ESTÁ EN "FORMA DE SUFIJO": 'counter++'.
+
+// LA "FORMA DE PREFIJO" ES CUANDO EL OPERADOR VA ANTES DE LA VARIABLE: '++counter'.
+
+// AMBAS SENTENCIAS HACEN LA MISMA COSA: AUMENTAR 'counter' POR 1.
+
+// ¿EXISTE ALGUNA DIFERENCIA? SÍ, PERO SOLAMENTE LA PODEMOS VER SI UTILIZAMOS EL VALOR DEVUELTO DE '++/--'.
+
+
+// ACLAREMOS. TAL COMO CONOCEMOS, TODOS LOS OPERADORES DEVUELVEN UN VALOR. INCREMENTO/ DECREMENTO NO ES UNA EXCEPCIÓN. LA FORMA PREFIJO DEVUELVE EL NUEVO VALOR MIENTRAS QUE LA FORMA SUFIJO DEVUELVE EL VALOR ANTERIOR (ANTES DEL INCREMENTO/DECREMENTO).
+
+// PARA VER LA DIFERENCIA, AQUÍ HAY UN EJEMPLO:
+
+let counter = 1;
+let w = ++counter; // (*)
+
+console.log(w); // 2
+console.log(``);
+
+// EN LA LÍNEA (*), LA FORMA PREFIJO '++counter' INCREMENTA 'counter' Y DEVUELVE EL NUEVO VALOR, 2. POR LO TANTO, EL 'alert' MUESTRA 2.
+
+// AHORA USEMOS LA FORMA SUFIJO:
+
+counter = 1;
+let p = counter++; // (*) cambiado ++counter a counter++
+
+console.log(p); // 1
+console.log(``);
+
+// EN LA LÍNEA (*), LA FORMA SUFIJO 'counter++' TAMBIÉN INCREMENTA 'counter', PERO DEVUELVE EL ANTIGUO VALOR (ANTES DE INCREMENTAR). POR LO TANTO, EL 'alert' MUESTRA 1.
+
+// PARA RESUMIR:
+
+// SI NO SE USA EL RESULTADO DEL INCREMENTO/DECREMENTO, NO HAY DIFERENCIA EN LA FORMA DE USAR.
+
+counter = 0;
+counter++;
+++counter;
+console.log(counter); // 2, las líneas de arriba realizan lo mismo
+console.log(``);
+
+// SI QUEREMOS AUMENTAR UN VALOR Y USAR INMEDIATAMENTE EL RESULTADO DEL OPERADOR, NECESITAMOS LA FORMA DE PREFIJO.
+
+counter = 0;
+console.log(++counter ); // 1
+console.log(``);
+
+// SI QUEREMOS INCREMENTAR UN VALOR, PERO USAMOS SU VALOR ANTERIOR, NECESITAMOS LA FORMA SUFIJO.
+
+// INCREMENTO/DECREMENTO ENTRE OTROS OPERADORES
+
+// LOS OPERADORES '++/--' TAMBIÉN PUEDEN SER USADOS DENTRO DE EXPRESIONES. SU PRECEDENCIA ES MÁS ALTA QUE LA MAYORÍA DE LOS OTROS OPERADORES ARITMÉTICOS.
+
+// POR EJEMPLO:
+
+counter = 1;
+console.log(2 * ++counter ); // 4
+console.log(``);
+
+// COMPARA CON:
+
+counter = 1;
+console.log(2 * counter++); // 2, porque counter++ devuelve el valor "antiguo"
+console.log(``);
+
+// AUNQUE TÉCNICAMENTE ESTÁ BIEN, TAL NOTACIÓN GENERALMENTE HACE QUE EL CÓDIGO SEA MENOS LEGIBLE. UNA LÍNEA HACE VARIAS COSAS, NO ES BUENO.
+
+// MIENTRAS LEE EL CÓDIGO, UN RÁPIDO ESCANEO OCULAR "VERTICAL" PUEDE PASAR POR ALTO FÁCILMENTE ALGO COMO 'counter++' Y NO SERÁ OBVIO QUE LA VARIABLE AUMENTÓ.
+
+// ACONSEJAMOS UN ESTILO DE "UNA LÍNEA - UNA ACCIÓN".
+
+counter = 1;
+console.log(2 * counter); // 2
+counter++;
+console.log(``);
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// OPERADORES A NIVEL DE BIT
+
+// LOS OPERADORES A NIVEL BIT TRATAN LOS ARGUMENTOS COMO NÚMEROS ENTEROS DE 32 BITS Y TRABAJAN EN EL NIVEL DE SU REPRESENTACIÓN BINARIA.
+
+// ESTOS OPERADORES NO SON ESPECÍFICOS DE JAVASCRIPT. SON COMPATIBLES CON LA MAYORÍA DE LOS LENGUAJES DE PROGRAMACIÓN.
+
+// LA LISTA DE OPERADORES.
+
+// AND ( & )
+// OR ( | )
+// XOR ( ^ )
+// NOT ( ~ )
+// LEFT SHIFT ( << )
+// RIGHT SHIFT ( >> )
+// ZERO-FILL RIGHT SHIFT ( >>> )
+
+
+// ESTOS OPERADORES SE USAN MUY RARAMENTE, CUANDO NECESITAMOS MANEJAR LA REPRESENTACIÓN DE NÚMEROS EN SU MÁS BAJO NIVEL. NO TENEMOS EN VISTA USARLOS PRONTO PUES EN EL DESARROLLO WEB TIENE POCO USO; PERO EN CIERTAS ÁREAS ESPECIALES, COMO LA CRIPTOGRAFÍA, SON ÚTILES. PUEDES LEER EL ARTÍCULO OPERADORES A NIVEL DE BIT EN MDN CUANDO SURJA LA NECESIDAD.
+
+// Estos operadores se usan muy raramente, cuando necesitamos manejar la representación de números en su más bajo nivel. No tenemos en vista usarlos pronto pues en el desarrollo web tiene poco uso; pero en ciertas áreas especiales, como la criptografía, son útiles. Puedes leer el artículo Operadores a nivel de bit en MDN cuando surja la necesidad.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// COMA
+
+// EL OPERADOR COMA ',' ES UNO DE LOS OPERADORES MÁS RAROS E INUSUALES. A VECES SE UTILIZA PARA ESCRIBIR CÓDIGO MÁS CORTO, POR LO QUE DEBEMOS CONOCERLO PARA PODER ENTENDER LO QUE ESTÁ SUCEDIENDO.
+
+// EL OPERADOR COMA NOS PERMITE EVALUAR VARIAS EXPRESIONES, SEPARÁNDOLAS CON UNA COMA ,. CADA EXPRESIÓN SE EVALÚA, PERO SÓLO SE DEVUELVE EL RESULTADO DE LA ÚLTIMA.
+
+// POR EJEMPLO:
+
+let t = (1 + 2, 3 + 4);
+
+console.log(t); // 7 (el resultado de 3 + 4)
+
+// AQUÍ, SE EVALÚA LA PRIMERA EXPRESIÓN '1 + 2' Y SE DESECHA SU RESULTADO. LUEGO, SE EVALÚA '3 + 4' Y SE DEVUELVE COMO RESULTADO.
+
+// COMA TIENE MUY BAJA PRECEDENCIA.
+
+// TENGA EN CUENTA QUE EL OPERADOR COMA TIENE UNA PRECEDENCIA MUY BAJA, INFERIOR 'a =', POR LO QUE LOS PARÉNTESIS SON IMPORTANTES EN EL EJEMPLO ANTERIOR.
+
+// SIN ELLOS: 'a = 1 + 2, 3 + 4' SE EVALÚA PRIMERO EL +, SUMANDO LOS NÚMEROS 'a = 3, 7', LUEGO EL OPERADOR DE ASIGNACIÓN = ASIGNA 'a = 3', Y EL RESTO ES IGNORADO. ES IGUAL QUE '(a = 1 + 2)', '3 + 4'.
+
+// ¿POR QUÉ NECESITAMOS UN OPERADOR QUE DESECHE TODO EXCEPTO LA ÚLTIMA EXPRESIÓN?
+
+// A VECES SE UTILIZAN EN CONSTRUCCIONES MÁS COMPLEJAS PARA EJECUTAR VARIAS ACCIONES EN UNA LÍNEA.
+
+// POR EJEMPLO:
+
+for (a = 1, b = 3, c = a * b; a < 10; a++) { // tres operaciones en una línea
+
+}
+
+// TALES TRUCOS SE USAN EN MUCHOS FRAMEWORKS DE JAVASCRIPT, POR ESO LOS MENCIONAMOS. SIN EMBARGO, GENERALMENTE NO MEJORAN LA LEGIBILIDAD DEL CÓDIGO, POR LO QUE DEBEMOS PENSAR BIEN ANTES DE USARLOS.
+
+// ------------------------------------------------------------------------------------------------------------------------
