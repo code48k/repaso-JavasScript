@@ -426,10 +426,7 @@ console.log(``);
 // RIGHT SHIFT ( >> )
 // ZERO-FILL RIGHT SHIFT ( >>> )
 
-
 // ESTOS OPERADORES SE USAN MUY RARAMENTE, CUANDO NECESITAMOS MANEJAR LA REPRESENTACIÓN DE NÚMEROS EN SU MÁS BAJO NIVEL. NO TENEMOS EN VISTA USARLOS PRONTO PUES EN EL DESARROLLO WEB TIENE POCO USO; PERO EN CIERTAS ÁREAS ESPECIALES, COMO LA CRIPTOGRAFÍA, SON ÚTILES. PUEDES LEER EL ARTÍCULO OPERADORES A NIVEL DE BIT EN MDN CUANDO SURJA LA NECESIDAD.
-
-// Estos operadores se usan muy raramente, cuando necesitamos manejar la representación de números en su más bajo nivel. No tenemos en vista usarlos pronto pues en el desarrollo web tiene poco uso; pero en ciertas áreas especiales, como la criptografía, son útiles. Puedes leer el artículo Operadores a nivel de bit en MDN cuando surja la necesidad.
 
 // ------------------------------------------------------------------------------------------------------------------------
 
