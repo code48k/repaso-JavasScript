@@ -19,7 +19,7 @@ console.log(message);
 
 // NUMBER
 
-let n = 123;
+let n = 123; 
 n = 12.345;
 console.log(n);
 
