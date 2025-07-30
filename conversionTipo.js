@@ -8,7 +8,7 @@
 
 // EJEMPLO 1: 
 
-let resultado1 = '5' + 3; // '53'
+let resultado1 = '5' + 3; // '53' 
 console.log(resultado1);
 
 // PERO SI USAMOS '-', NO ES TAN AMISTOSO:
