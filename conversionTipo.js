@@ -84,16 +84,21 @@ let ejemplo3 = Number(true); // conversión 1
 console.log(ejemplo3); 
 let ejemplo4 = Number(false); // conversión 0
 console.log(ejemplo4); 
-let ejemplo5 = Number(""); // conversión 0
-console.log(ejemplo5); 
-let ejemplo6 = Number(" "); // conversión 0
+let ejemplo5 = Number(0); // conversión 0
+console.log(ejemplo5);
+let ejemplo6 = Number(1); // conversión 1
 console.log(ejemplo6);
-let ejemplo7 = Number("¡Hola, Chicos!!!"); // NaN, conversión fallida
-console.log(ejemplo7);
-let ejemplo8 = Number("    123     "); // Se eliminan los espacios (incluye espacios, tabs \t, saltos de línea \n, etc.) al inicio y final del texto.
+let ejemplo7 = Number(""); // conversión 0
+console.log(ejemplo7); 
+let ejemplo8 = Number(" "); // conversión 0
 console.log(ejemplo8);
-let ejemplo9 = Number("123z"); // NaN, conversión fallida
+let ejemplo9 = Number("¡Hola, Chicos!!!"); // NaN, conversión fallida
 console.log(ejemplo9);
+let ejemplo10 = Number("    123     "); // Se eliminan los espacios (incluye espacios, tabs \t, saltos de línea \n, etc.) al inicio y final del texto.
+console.log(ejemplo10);
+let ejemplo11 = Number("123z"); // NaN, conversión fallida
+console.log(ejemplo11);
+
 
 // TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN 0 MIENTRAS QUE 'undefined' SE CONVIERTE EN NaN.
 
