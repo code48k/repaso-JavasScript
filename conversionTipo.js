@@ -39,7 +39,7 @@ console.log(booleano);
 
 // ------------------------------------------------------------------------------------------------------------------------
 
-// STRING
+// TOSTRING
 
 // LA CONVERSIÓN A STRING OCURRE CUANDO NECESITAMOS LA REPRESENTACIÓN EN FORMA DE TEXTO DE UN VALOR.
 
@@ -55,7 +55,7 @@ console.log(typeof value); // string
 
 // ------------------------------------------------------------------------------------------------------------------------
 
-// NUMBER
+// TONUMBER
 
 // LA CONVERSIÓN NÚMERICA OCURRE AUTOMÁTICAMENTE EN FUNCIONES MATEMÁTICAS Y EXPRESIONES.
 
@@ -99,7 +99,6 @@ console.log(ejemplo10);
 let ejemplo11 = Number("123z"); // NaN, conversión fallida
 console.log(ejemplo11);
 
-
 // TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN 0 MIENTRAS QUE 'undefined' SE CONVIERTE EN NaN.
 
 // CASI TODAS LAS OPERACIONES MATEMÁTICAS CONVIERTEN VALORES A NÚMEROS. UNA EXCEPCIÓN NOTABLE ES LA SUMA +. SI UNO DE LOS VALORES SUMADOS ES UN STRING EL OTRO VALOR ES CONVERTIDO A STRING.
@@ -113,7 +112,7 @@ console.log('1' + 2); // '12' (string a la izquierda)
 
 // ------------------------------------------------------------------------------------------------------------------------
 
-// BOOLEAN
+// TOBOOLEAN
 
 // LA CONVERSIÓN A BOOLEAN ES LA MÁS SIMPLE.
 
