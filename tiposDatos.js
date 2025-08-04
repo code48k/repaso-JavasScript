@@ -6,7 +6,7 @@
 
 // PODEMOS ALMACENAR UN VALOR DE CUALQUIER TIPO DENTRO DE UNA VARIABLE. POR EJEMPLO, UNA VARIABLE PUEDE CONTENER EN UN MOMENTO UN STRING Y LUEGO ALMACENAR UN NÚMERO.
 
-let message = "hola"; // no hay error
+let message = "hola"; // no hay error 
 message = 123456; // se trasforma a un número
 console.log(message);
 
