@@ -1,3 +1,5 @@
+// INTERACCIÓN DE VENTANAS MODALES
+
 // COMO USAREMOS EL NAVEGADOR COMO NUESTRO ENTORNO DE DEMOSTRACIÓN, VEAMOS UN PAR DE FUNCIONES PARA INTERACTUAR CON EL USUARIO: 'alert', 'prompt', y 'confirm'.    
 
 // ------------------------------------------------------------------------------------------------------------------------ 
