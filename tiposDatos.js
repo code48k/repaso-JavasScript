@@ -227,10 +227,9 @@ typeof alert // "function"
 
 // Y UN TIPO DE DATO NO PRIMITIVO:
 
-// 'object' PARA ESTRUCTURAS DE DATOS COMPLEJAS.
+// 'object' PARA ESTRUCTURAS DE DATOS COMPLEJAS. 
 
 // --------------------------------------------
-
 
 // EL OPERADOR 'typeof' NOS PERMITE VER QUÉ TIPO ESTÁ ALMACENADO EN UNA VARIABLE.
 
