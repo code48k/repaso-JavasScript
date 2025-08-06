@@ -229,7 +229,7 @@ typeof alert // "function"
 
 // 'object' PARA ESTRUCTURAS DE DATOS COMPLEJAS. 
 
-// --------------------------------------------
+// ---------------------------------------------
 
 // EL OPERADOR 'typeof' NOS PERMITE VER QUÉ TIPO ESTÁ ALMACENADO EN UNA VARIABLE.
 
