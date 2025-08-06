@@ -149,7 +149,7 @@ console.log(Boolean(" ")); // true
 // LA CONVERSIÓN SIGUE LAS REGLAS:
 
 
-// VALOR	                                            SE CONVIERTE EN…
+// VALOR                                                SE CONVIERTE EN…
 // undefined	                                        NaN
 // null	                                                0
 // true / false	                                        1 / 0
@@ -161,7 +161,7 @@ console.log(Boolean(" ")); // true
 
 // SIGUE LAS REGLAS:
 
-// VALOR	                                            SE CONVIERTE EN…
+// VALOR                                                SE CONVIERTE EN…
 // 0, null, undefined, NaN, ""	                        false
 // CUALQUIER OTRO VALOR	                                true
 
