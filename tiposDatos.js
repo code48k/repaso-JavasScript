@@ -8,13 +8,14 @@
 
 let message = "hola"; // no hay error 
 message = 123456; // se trasforma a un número
-console.log(message);
+console.log(message); // imprimimos por consola
 
 // LOS LENGUAJES DE PROGRAMACIÓN QUE PERMITEN ESTAS COSAS, COMO JAVASCRIPT, SE DENOMINAN "DINÁMICAMENTE TIPADOS", LO QUE SIGNIFICA QUE ALLÍ HAY TIPOS DE DATOS, PERO LAS VARIABLES NO ESTÁN VINCULADAS RÍGIDAMENTE A NINGUNO DE ELLOS. 
 
 // CUANDO DECIMOS QUE JAVASCRIPT ES UN LENGUAJE DINÁMICAMENTE TIPADO, ESTAMOS HABLANDO DE CÓMO MANEJA LOS TIPOS DE DATOS (COMO STRING, NÚMEROS, BOOLEANOS, ETC...). EN TIEMPO DE EJECUCIÓN.
 
 // EN TERMINOS SIMPLES
+
 // 🔮 "DINÁMICAMENTE TIPADO" SIGNIFICA QUE NO NECESITAS DECIRLE A JAVASCRIPT QUÉ TIPO DE DATO VA A TENER UNA VARIABLE. ÉL LO ADIVINA SOLITO Y PUEDE CAMBIARLO CUANDO QUIERA.
 
 // ------------------------------------------------------------------------------------------------------------------------
@@ -29,9 +30,9 @@ console.log(n);
 
 // HAY MUCHAS OPERACIONES PARA NÚMEROS. POR EJEMPLO, MULTIPLICACIÓN *, DIVISIÓN /, SUMA +, RESTA -, Y DEMÁS.
 
-// ADENÁS QUE LOS NÚMEROS COMUNES, EXISTEN LOS LLAMADOS "VALORES NUMÉRICOS ESPECIALES" QUE TAMBIÉN PERTENECEN A ESTE TIPO DE DATOS: 'Infinity', -'Infinity Y NaN'.
+// ADEMÁS QUE LOS NÚMEROS COMUNES, EXISTEN LOS LLAMADOS "VALORES NUMÉRICOS ESPECIALES" QUE TAMBIÉN PERTENECEN A ESTE TIPO DE DATOS: 'Infinity', '-Infinity' Y NaN'.
 
-// INFINITY REPRESENTA EL INFINITO MATEMÁTICO ∞. ES UN VALOR ESPECIAL QUE ES MAYOR QUE CUALQUIER NÚMERO.
+// 'Infinity' REPRESENTA EL INFINITO MATEMÁTICO ∞. ES UN VALOR ESPECIAL QUE ES MAYOR QUE CUALQUIER NÚMERO.
 
 // PODEMOS OBTENERLO COMO RESULTADO DE LA DIVISIÓN POR CERO: 
 
@@ -51,7 +52,7 @@ console.log(NaN + 1); // NaN
 console.log(3 * NaN); // NaN
 console.log("not a number" / 2 - 1); // NaN
 
-// POR LO TANTO, SI HAY UN NaN EN ALGUNA PARTE DE UNA EXPRESIÓN MATEMÁTICA, SE PROPAGA A TODO EL RESULTADO (CON UNA ÚNICA EXCEPCIÓN: NaN ** 0 ES 1).
+// POR LO TANTO, SI HAY UN 'NaN' EN ALGUNA PARTE DE UNA EXPRESIÓN MATEMÁTICA, SE PROPAGA A TODO EL RESULTADO (CON UNA ÚNICA EXCEPCIÓN: 'NaN ** 0 ES 1').
 
 console.log(NaN ** 0); // 1
 
@@ -61,7 +62,7 @@ console.log(NaN ** 0); // 1
 
 // BIGINT
 
-// BigInt ES UN TIPO DE DATO EN JAVASCRIPT QUE TE PERMITE TRABAJAR CON ENTEROS EXTREMADAMENTE GRANDES.
+// 'BigInt' ES UN TIPO DE DATO EN JAVASCRIPT QUE TE PERMITE TRABAJAR CON NÚMEROS ENTEROS EXTREMADAMENTE GRANDES.
 
 // EN JAVASCRIPT, EL TIPO 'number' NO PUEDE REPRESENTAR DE FORMA SEGURA VALORES ENTEROS MAYORES QUE (253-1) (ESO ES 9007199254740991), O MENOR QUE -(253-1) PARA NEGATIVOS.
 
@@ -73,7 +74,7 @@ console.log(numeroGigante) // la "n" al final significa que es un BigInt
 // EJEMPLO 2
 
 const bigInt = BigInt(1234567890123456789012345678901234567890n);
-console.log(bigInt);
+console.log(bigInt); // la "n" al final significa que es un BigInt
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -97,18 +98,16 @@ let phrase = `se puede incrustar otro ${str}`;
 
 let name = "John";
 
-// incrustar una variable
-console.log( `Hola, ${name}!` ); // Hola, John!
 
-// incrustar una expresión
-console.log( `el resultado es ${1 + 2}` ); //el resultado es 3
-console.log(``);
+console.log( `Hola, ${name}!` ); // incrustar una variable, ejemplo: Hola, John!
 
-// LA EXPRESIÓN DENTRO DE ${...} SE EVALÚA Y EL RESULTADO PASA A FORMAR PARTE DE LA CADENA. PODEMOS PONER CUALQUIER COSA AHÍ DENTRO: UNA VARIABLE COMO 'name', UNA EXPRESIÓN ARITMÉTICA COMO 1 + 2, O ALGO MÁS COMPLEJO.
+console.log( `el resultado es ${1 + 2}` ); // incrustar una expresión, ejemplo: 3
+
+// LA EXPRESIÓN DENTRO DE ${...} SE EVALÚA Y EL RESULTADO PASA A FORMAR PARTE DE LA CADENA. PODEMOS PONER CUALQUIER COSA AHÍ DENTRO: UNA VARIABLE COMO 'name', UNA EXPRESIÓN ARITMÉTICA COMO '1 + 2', O ALGO MÁS COMPLEJO.
 
 // TOMA EN CUENTA QUE ESTO SÓLO SE PUEDE HACER CON LOS BACKTICKS. ¡LAS OTRAS COMILLAS NO TIENEN ESTA CAPACIDAD DE INCRUSTACIÓN.
 
-console.log("el resultado es ${1 + 2}"); // el resultado es ${1 + 2} (las comillas dobles no hacen nada).
+console.log("el resultado es ${1 + 2}"); // en este caso imprimimos por consola, "el resultado es ${1 + 2}" no podemos ni incrustar variable ni expresiones
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -132,7 +131,7 @@ console.log(isGreater); // verdadero (el resultado de la comparación es "sí")
 
 // ------------------------------------------------------------------------------------------------------------------------
 
-// EL VALOR "NULL"
+// EL VALOR "null"
 
 // EL VALOR ESPECIAL 'null' NO PERTENECE A NINGUNO DE LOS TIPOS DESCRITOS ANTERIORMENTE.
 
@@ -149,34 +148,34 @@ console.log(age1);
 
 // ------------------------------------------------------------------------------------------------------------------------
 
-// EL VALOR "UNDEFINED"
+// EL VALOR "undefined"
 
-// EL VALOR ESPECIAL 'undefined' TAMBIÉN SE DISTINGUE. ES UN TIPO PROPIO, IGUAL QUE 'null'
+// EL VALOR ESPECIAL 'undefined' TAMBIÉN SE DISTINGUE. ES UN TIPO PROPIO, IGUAL QUE 'null'.
 
 // EL SIGNIFICADO DE 'undefined' SIGNIFICA "VALOR NO ASIGNADO".
 
-// SI UNA VARIABLE ES DECLARADA, PERO NO ASIGNADA, ENTONCES SU VALOR ES 'undefined'.
+// SI UNA VARIABLE DECLARADA, PERO NO ASIGNADA, ENTONCES SU VALOR ES 'undefined'.
 
 let age2;
-console.log(age2); // muestra "undefined"
+console.log(age2); // // imprimimos por consola "undefined"
 
 // ------------------------------------------------------------------------------------------------------------------------
 
 // OBJECT Y SYMBOL
 
-// EL TIPO OBJECT (OBJETO) ES ESPECIAL.
+// EL TIPO 'object' (OBJETO) ES ESPECIAL.
 
 // TODOS LOS DEMÁS TIPOS SE LLAMAN "PRIMITIVOS" PORQUE SUS VALORES PUEDEN CONTENER UNA SOLA COSA (YA SEA UNA CADENA, UN NÚMERO, O LO QUE SEA). POR EL CONTRARIO, LOS OBJETOS SE UTILIZAN PARA ALMACENAR COLECCIONES DE DATOS Y ENTIDADES MÁS COMPLEJAS.
 
 // SIENDO ASÍ DE IMPORTANTES, LOS OBJETOS MERECEN UN TRATO ESPECIAL.
 
-// EL TIPO SYMBOL (SÍMBOLO) SE UTILIZA PARA CREAR IDENTIFICADORES ÚNICOS PARA LOS OBJETOS. TENEMOS QUE MENCIONARLO AQUÍ PARA UNA MAYOR INTEGRIDAD, PERO ES MEJOR ESTUDIAR ESTE TIPO DESPUÉS DE LOS OBJETOS.
+// EL TIPO 'symbol' (SÍMBOLO) SE UTILIZA PARA CREAR IDENTIFICADORES ÚNICOS PARA LOS OBJETOS. TENEMOS QUE MENCIONARLO AQUÍ PARA UNA MAYOR INTEGRIDAD, PERO ES MEJOR ESTUDIAR ESTE TIPO DESPUÉS DE LOS OBJETOS.
 
 // ------------------------------------------------------------------------------------------------------------------------
 
 // EL OPERADOR 'typeof'
 
-// EL OPERADOR 'typeof' DEVUELVE EL TIPO DE DATO DEL OPERANDO. ES ÚTIL CUANDO QUEREMOS PROCESAR VALORES DE DIFERENTES TIPOS DE FORMA DIFERENTE O SIMPLEMENTE QUEREMOS HACER UNA COMPROBACIÓN RÁPIDA.
+// EL OPERADOR 'typeof' DEVUELVE EL TIPO DE DATO DEL OPERANDO. ES ÚTIL CUANDO QUEREMOS PROCESAR VALORES DE DIFERENTES TIPOS, DE FORMA DIFERENTE O SIMPLEMENTE QUEREMOS HACER UNA COMPROBACIÓN RÁPIDA.
 
 // LA LLAMADA A 'typeof x' DEVUELVE UNA CADENA CON EL NOMBRE DEL TIPO.
 
@@ -201,5 +200,39 @@ typeof alert // "function"
 // SE PUEDE ENCONTRAR OTRA SINTAXIS EN ALGÚN CÓDIGO: 'typeof(x)'. ES LO MISMO QUE 'typeof x'.
 
 // PARA DEJARLO CLARO: 'typeof' ES UN OPERADOR, NO UNA FUNCIÓN. LOS PARÉNTESIS AQUÍ NO SON PARTE DEL OPERADOR 'typeof'. SON DEL TIPO USADO EN AGRUPAMIENTO MATEMÁTICO.
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// RESUMEN
+
+// HAY 8 TIPOS BÁSICOS EN JAVASCRIPT.
+
+// SIETE TIPOS DE DATOS PRIMITIVOS.
+
+// 'number' PARA NÚMEROS DE CUALQUIER TIPO: ENTEROS O DE PUNTO FLOTANTE, LOS ENTEROS ESTÁN LIMITADOS POR ±(253-1).
+
+// 'bigint' PARA NÚMEROS ENTEROS DE LONGITUD ARBITRARIA.
+
+// 'string' PARA CADENAS. UNA CADENA PUEDE TENER CERO O MÁS CARACTERES, NO HAY UN TIPO ESPECIAL PARA UN ÚNICO CARÁCTER.
+
+// 'boolean' PARA VERDADERO Y FALSO: 'true/false'.
+
+// 'null' PARA VALORES DESCONOCIDOS – UN TIPO INDEPENDIENTE QUE TIENE UN SOLO VALOR NULO: 'null'.
+
+// 'undefined' PARA VALORES NO ASIGNADOS – UN TIPO INDEPENDIENTE QUE TIENE UN ÚNICO VALOR INDEFINIDO: 'undefined'.
+
+// 'symbol' PARA IDENTIFICADORES ÚNICOS.
+
+// Y UN TIPO DE DATO NO PRIMITIVO:
+
+// 'object' PARA ESTRUCTURAS DE DATOS COMPLEJAS.
+
+// EL OPERADOR 'typeof' NOS PERMITE VER QUÉ TIPO ESTÁ ALMACENADO EN UNA VARIABLE.
+
+// DOS FORMAS: 'typeof x' O 'typeof(x)'.
+
+// DEVUELVE UNA CADENA CON EL NOMBRE DEL TIPO. POR EJEMPLO 'string'.
+
+// PARA 'null' DEVUELVE 'object': ESTO ES UN ERROR EN EL LENGUAJE, EN REALIDAD NO ES UN OBJETO. 
 
 // ------------------------------------------------------------------------------------------------------------------------
