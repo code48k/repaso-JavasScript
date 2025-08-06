@@ -37,7 +37,7 @@ console.log(booleano);
 
 // POR EJEMPLO, 'alert' CONVIERTE AUTOMÁTICAMENTE CUALQUIER VALOR A STRING PARA MOSTRARLO. LAS OPERACIONES MATEMÁTICAS CONVIERTE LOS VALORES A NÚMEROS.
 
-// TAMBIÉN HAY CASOS DONDE NECESITAMOS CONVERTIR DE MANERA EXPLÍCITA UN VALOR AL TIPO ESPERADO.
+// TAMBIÉN HAY CASOS DONDE NECESITAMOS CONVERTIR DE MANERA EXPLÍCITA, UN VALOR AL TIPO ESPERADO.
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ console.log("6" / "2"); // 3
 let str = "123";
 console.log(typeof str); // string
 
-let num = Number(str); // se convierte en 123
+let num = Number(str); // se convierte en un número 123
 console.log(typeof num); // number
 
 // SI EL STRING NO ES UN NÚMERO VÁLIDO, EL RESULTADO DE LA CONVERSIÓN SERÁ 'NaN'.
@@ -103,14 +103,14 @@ console.log(ejemplo11);
 
 // TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN 0 MIENTRAS QUE 'undefined' SE CONVIERTE EN 'NaN'.
 
-// CASI TODAS LAS OPERACIONES MATEMÁTICAS CONVIERTEN VALORES A NÚMEROS. UNA EXCEPCIÓN NOTABLE ES LA SUMA +. SI UNO DE LOS VALORES SUMADOS ES UN STRING EL OTRO VALOR ES CONVERTIDO A STRING.
+// CASI TODAS LAS OPERACIONES MATEMÁTICAS CONVIERTEN VALORES A NÚMEROS. UNA EXCEPCIÓN NOTABLE ES LA SUMA +. SI UNO DE LOS VALORES SUMADOS ES UN STRING, EL OTRO VALOR ES CONVERTIDO A STRING.
 
 // LUEGO, LOS CONCATENA (UNE):
 
 console.log(1 + '2'); // '12' (string a la derecha)
 console.log('1' + 2); // '12' (string a la izquierda)
 
-// ESTO OCURRE SOLO SI AL MENOS UNO DE LOS ARGUMENTOS ES UN STRING, EN CASO CONTRARIO LOS VALORES SON CONVERTIDOS A NÚMERO.
+// ESTO OCURRE SOLO SI AL MENOS UNO DE LOS ARGUMENTOS ES UN STRING, EN CASO CONTRARIO, LOS VALORES SON CONVERTIDOS A NÚMERO.
 
 // ------------------------------------------------------------------------------------------------------------------------
 
@@ -150,6 +150,7 @@ console.log(Boolean(" ")); // true
 
 
 // VALOR                                                SE CONVIERTE EN…
+
 // undefined	                                        NaN
 // null	                                                0
 // true / false	                                        1 / 0
@@ -163,6 +164,7 @@ console.log(Boolean(" ")); // true
 
 
 // VALOR                                                SE CONVIERTE EN…
+
 // 0, null, undefined, NaN, ""	                        false
 // CUALQUIER OTRO VALOR	                                true
 
@@ -171,6 +173,6 @@ console.log(Boolean(" ")); // true
 
 // 'undefined' es 'NaN' COMO NÚMERO, NO 0.
 
-// "0" Y TEXTOS QUE SOLO CONTIENEN ESPACIOS COMO " " SON TRUE COMO BOOLEAN.
+// "0" Y TEXTOS QUE SOLO CONTIENEN ESPACIOS COMO " " SON 'true' COMO BOOLEAN.
 
 // ------------------------------------------------------------------------------------------------------------------------
