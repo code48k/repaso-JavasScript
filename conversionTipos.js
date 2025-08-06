@@ -161,9 +161,11 @@ console.log(Boolean(" ")); // true
 
 // SIGUE LAS REGLAS:
 
+
 // VALOR                                                SE CONVIERTE EN…
 // 0, null, undefined, NaN, ""	                        false
 // CUALQUIER OTRO VALOR	                                true
+
 
 // LA MAYORÍA DE ESTAS REGLAS SON FÁCILES DE ENTENDER Y RECORDAR. LAS EXCEPCIONES MÁS NOTABLES DONDE LA GENTE SUELE COMETER ERRORES SON:
 
