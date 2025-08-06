@@ -1,12 +1,12 @@
-// CONVERSION DE TIPOS
+// CONVERSIÓN DE TIPOS 
 
 // LA CONVERSIÓN DE TIPO EN JAVASCRIPT ES CUANDO UN VALOR DE UN TIPO DE DATO (COMO STRING, NUMBER, BOOLEAN, ETC...) SE TRANSFORMA AUTOMÁTICAMENTE O MANUALMENTE EN OTRO TIPO. JAVASCRIPT LO HACE A VECES POR SU CUENTA (CONVERSIÓN IMPLÍCITA), Y OTRAS VECES TÚ LE DICES "¡CAMBIA ESTO YA!" (CONVERSIÓN EXPLÍCITA).   
 
-// 🔄 TIPOS DE CONVERSION DE TIPO
+// 🔄 TIPOS DE CONVERSION DE TIPO:
 
 // ✅ CONVERSIÓN IMPLÍCITA 
 
-// JAVASCRIPT INTENTA SER SIMPÁTICO Y CONVERTIR TIPOS POR TI, A VECES SIN AVISARTE... A VECES CON CONSECUENCIAS RARAS. AQUÍ JAVASCRIPT CONVIERTE EL 3 A STRING Y LO CONCATENA.
+// JAVASCRIPT INTENTA SER SIMPÁTICO Y CONVERTIR TIPOS POR TI, A VECES SIN AVISARTE... A VECES CON CONSECUENCIAS RARAS. AQUÍ JAVASCRIPT CONVIERTE EL '3' A STRING Y LO CONCATENA.
 
 // EJEMPLO 1: 
 
@@ -63,7 +63,7 @@ console.log(typeof value); // string
 
 // POR EJEMPLO, CUANDO SE DIVIDEN VALORES NO NÚMERICOS USANDO '/':
 
-console.log("6" / "2");
+console.log("6" / "2"); // 3
 
 // PODEMOS USAR LA FUNCIÓN 'Number(value)' PARA CONVERTIR DE FORMA EXPLÍCITA DE UN VALOR A UN NÚMERO: 
 
@@ -73,7 +73,7 @@ console.log(typeof str); // string
 let num = Number(str); // se convierte en 123
 console.log(typeof num); // number
 
-// SI EL STRING NO ES UN NÚMERO VÁLIDO, EL RESULTADO DE LA CONVERSIÓN SERÁ NaN.
+// SI EL STRING NO ES UN NÚMERO VÁLIDO, EL RESULTADO DE LA CONVERSIÓN SERÁ 'NaN'.
 
 let age = Number("un texto arbitrario en vez de un número");
 console.log(age); // NaN, conversión fallida
@@ -101,7 +101,7 @@ console.log(ejemplo10);
 let ejemplo11 = Number("123z"); // NaN, conversión fallida
 console.log(ejemplo11);
 
-// TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN 0 MIENTRAS QUE 'undefined' SE CONVIERTE EN NaN.
+// TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN 0 MIENTRAS QUE 'undefined' SE CONVIERTE EN 'NaN'.
 
 // CASI TODAS LAS OPERACIONES MATEMÁTICAS CONVIERTEN VALORES A NÚMEROS. UNA EXCEPCIÓN NOTABLE ES LA SUMA +. SI UNO DE LOS VALORES SUMADOS ES UN STRING EL OTRO VALOR ES CONVERTIDO A STRING.
 
@@ -135,5 +135,38 @@ console.log(Boolean("")); // false
 console.log(Boolean(1)); // true
 console.log(Boolean("hola")); // true
 console.log(Boolean(" ")); // true
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+// RESUMEN
+
+// LAS TRES CONVERSIONES DE TIPO MÁS USADAS SON A STRING, A NÚMERO Y A BOOLEAN.
+
+// TOSTRING – OCURRE CUANDO SE MUESTRA ALGO. SE PUEDE REALIZAR CON 'String(value)'. LA CONVERSIÓN A STRING ES USUALMENTE OBVIA PARA LOS VALORES PRIMITIVOS.
+
+// TONUMBER – OCURRE EN OPERACIONES MATEMÁTICAS. SE PUEDE REALIZAR CON Number(value).
+
+// LA CONVERSIÓN SIGUE LAS REGLAS:
+
+
+// VALOR	                SE CONVIERTE EN…
+// undefined	            NaN
+// null	                    0
+// true / false	            1 / 0
+// string	                El string es leído “como es”, los espacios en blanco (incluye espacios, tabs \t, saltos de línea \n, etc.) tanto al inicio como al final son ignorados. Un string vacío se convierte en 0. Un error entrega NaN.
+
+// TOBOOLEAN – OCURREN EN OPERACIONES LÓGICAS. SE PUEDE REALIZAR CON Boolean(value).
+
+// SIGUE LAS REGLAS:
+
+// VALOR	                                        SE CONVIERTE EN…
+// 0, null, undefined, NaN, ""	                    false
+// cualquier otro valor	                            true
+
+// LA MAYORÍA DE ESTAS REGLAS SON FÁCILES DE ENTENDER Y RECORDAR. LAS EXCEPCIONES MÁS NOTABLES DONDE LA GENTE SUELE COMETER ERRORES SON:
+
+// 'undefined' es NaN COMO NÚMERO, NO 0.
+
+// "0" Y TEXTOS QUE SOLO CONTIENEN ESPACIOS COMO " " SON TRUE COMO BOOLEAN.
 
 // ------------------------------------------------------------------------------------------------------------------------
