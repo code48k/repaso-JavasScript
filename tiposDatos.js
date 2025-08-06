@@ -16,7 +16,7 @@ console.log(message); // imprimimos por consola
 
 // EN TERMINOS SIMPLES:
 
-// 🔮 "DINÁMICAMENTE TIPADO" SIGNIFICA QUE NO NECESITAS DECIRLE A JAVASCRIPT QUÉ TIPO DE DATO VA A TENER UNA VARIABLE. ÉL LO ADIVINA SOLITO Y PUEDE CAMBIARLO CUANDO QUIERA.
+// 🔮 "DINÁMICAMENTE TIPADO" SIGNIFICA QUE NO NECESITAS DECIRLE A JAVASCRIPT, QUÉ TIPO DE DATO VA A TENER UNA VARIABLE. ÉL LO ADIVINA SOLITO Y PUEDE CAMBIARLO CUANDO QUIERA.
 
 // ------------------------------------------------------------------------------------------------------------------------
 
