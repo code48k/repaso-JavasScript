@@ -149,23 +149,25 @@ console.log(Boolean(" ")); // true
 // LA CONVERSIÓN SIGUE LAS REGLAS:
 
 
-// VALOR	                SE CONVIERTE EN…
-// undefined	            NaN
-// null	                    0
-// true / false	            1 / 0
-// string	                El string es leído “como es”, los espacios en blanco (incluye espacios, tabs \t, saltos de línea \n, etc.) tanto al inicio como al final son ignorados. Un string vacío se convierte en 0. Un error entrega NaN.
+// VALOR	                                            SE CONVIERTE EN…
+// undefined	                                        NaN
+// null	                                                0
+// true / false	                                        1 / 0
+
+
+// EL STRING ES LEÍDO "COMO ES", LOS ESPACIOS EN BLANCO (INCLUYE ESPACIOS, TABS \t, SALTOS DE LÍNEA \n, ETC.) TANTO AL INICIO COMO AL FINAL SON IGNORADOS. UN STRING VACÍO SE CONVIERTE EN 0. UN ERROR ENTREGA 'NaN'.
 
 // TOBOOLEAN – OCURREN EN OPERACIONES LÓGICAS. SE PUEDE REALIZAR CON Boolean(value).
 
 // SIGUE LAS REGLAS:
 
-// VALOR	                                        SE CONVIERTE EN…
-// 0, null, undefined, NaN, ""	                    false
-// cualquier otro valor	                            true
+// VALOR	                                            SE CONVIERTE EN…
+// 0, null, undefined, NaN, ""	                        false
+// CUALQUIER OTRO VALOR	                                true
 
 // LA MAYORÍA DE ESTAS REGLAS SON FÁCILES DE ENTENDER Y RECORDAR. LAS EXCEPCIONES MÁS NOTABLES DONDE LA GENTE SUELE COMETER ERRORES SON:
 
-// 'undefined' es NaN COMO NÚMERO, NO 0.
+// 'undefined' es 'NaN' COMO NÚMERO, NO 0.
 
 // "0" Y TEXTOS QUE SOLO CONTIENEN ESPACIOS COMO " " SON TRUE COMO BOOLEAN.
 
