@@ -223,6 +223,8 @@ typeof alert // "function"
 
 // 'symbol' PARA IDENTIFICADORES ÚNICOS.
 
+// -------------------------------------
+
 // Y UN TIPO DE DATO NO PRIMITIVO:
 
 // 'object' PARA ESTRUCTURAS DE DATOS COMPLEJAS.
