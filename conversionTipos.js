@@ -45,7 +45,7 @@ console.log(booleano);
 
 // LA CONVERSIÓN A STRING OCURRE CUANDO NECESITAMOS LA REPRESENTACIÓN EN FORMA DE TEXTO DE UN VALOR.
 
-// POR EJEMPLO, 'alert(value)' LO HACE PARA MOSTRAR EL VALOR COMO TEXTO.
+// POR EJEMPLO, 'alert(value)' LO QUE HACE ES MOSTRAR UN VALOR COMO TEXTO.
 
 // TAMBIÉN PODEMOS LLAMAR A LA FUNCIÓN 'String(value)' PARA CONVERTIR UN VALOR A STRING.
 
@@ -70,7 +70,7 @@ console.log("6" / "2"); // 3
 let str = "123";
 console.log(typeof str); // string
 
-let num = Number(str); // se convierte en un número 123 (number)
+let num = Number(str); // '123' number
 console.log(typeof num); 
 
 // SI EL STRING NO ES UN NÚMERO VÁLIDO, EL RESULTADO DE LA CONVERSIÓN SERÁ 'NaN'.
@@ -103,7 +103,7 @@ console.log(ejemplo10);
 let ejemplo11 = Number("123z"); // NaN, conversión fallida
 console.log(ejemplo11);
 
-// TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN '0' MIENTRAS QUE 'undefined' SE CONVIERTE EN 'NaN'.
+// TENGA EN CUENTA QUE 'null' Y 'undefined' SE COMPORTA DE DISTINTA MANERA AQUÍ: 'null' SE CONVIERTE EN '0', MIENTRAS QUE 'undefined' SE CONVIERTE EN 'NaN'.
 
 // CASI TODAS LAS OPERACIONES MATEMÁTICAS CONVIERTEN VALORES A NÚMEROS. UNA EXCEPCIÓN NOTABLE ES LA SUMA +. SI UNO DE LOS VALORES SUMADOS ES UN STRING, EL OTRO VALOR ES CONVERTIDO A STRING.
 
@@ -173,7 +173,7 @@ console.log(Boolean(" ")); // true
 
 // LA MAYORÍA DE ESTAS REGLAS SON FÁCILES DE ENTENDER Y RECORDAR. LAS EXCEPCIONES MÁS NOTABLES DONDE LA GENTE SUELE COMETER ERRORES SON:
 
-// 'undefined' es 'NaN' COMO NÚMERO, NO 0.
+// 'undefined' es 'NaN', REPRESENTA ERROR DE CALCULO, NO '0'.
 
 // "0" Y TEXTOS QUE SOLO CONTIENEN ESPACIOS COMO " " SON 'true' COMO BOOLEAN.
 
