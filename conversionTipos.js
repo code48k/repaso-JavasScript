@@ -28,7 +28,7 @@ console.log(resultado2);
 
 // EJEMPLO 3: 
 
-let numero = Number('42'); // 42 (número)
+let numero = Number('42'); // 42 (number)
 let texto = String(123);  // '123' (string)
 let booleano = Boolean(0); // false (boolean)
 console.log(numero);
